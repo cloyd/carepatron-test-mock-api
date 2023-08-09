@@ -3,12 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.listClients = exports.removeClient = exports.updateClient = exports.addClient = exports.store = void 0;
 exports.store = {
     entities: {
-        'xx-aa-bb': {
-            id: 'xx-aa-bb',
-            firstName: 'John',
-            lastName: 'Smitherin',
-            email: 'john@gmail.com',
-            phoneNumber: '+6192099102',
+        "xx-aa-bb": {
+            id: "xx-aa-bb",
+            firstName: "John",
+            lastName: "Smitherin",
+            email: "john@gmail.com",
+            phoneNumber: "+6192099102",
         },
     },
 };
@@ -37,3 +37,4 @@ const listClients = () => {
     });
 };
 exports.listClients = listClients;
+//# sourceMappingURL=store.js.map

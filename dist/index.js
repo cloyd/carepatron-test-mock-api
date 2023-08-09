@@ -19,22 +19,23 @@ app.listen(port, () => {
     console.log(`Mock API is running at http://localhost:${port}`);
 });
 // main page
-app.get('/', (req, res) => {
-    res.send('Mock API');
+app.get("/", (req, res) => {
+    res.send("Mock API");
 });
 // get clients
-app.get('/clients', (req, res) => {
+app.get("/clients", (req, res) => {
     res.send((0, store_1.listClients)());
 });
 // create client
-app.post('/clients', (req, res) => {
+app.post("/clients", (req, res) => {
     const client = Object.assign(Object.assign({}, req.body), { id: new Date().toISOString() });
     (0, store_1.addClient)(Object.assign(Object.assign({}, client), { id: (0, uuid_1.v4)() }));
     res.send(client);
 });
 // update client
-app.put('/clients/:id', (req, res) => {
+app.put("/clients/:id", (req, res) => {
     const client = req.body;
     (0, store_1.updateClient)(client);
     res.status(204);
 });
+//# sourceMappingURL=index.js.map
